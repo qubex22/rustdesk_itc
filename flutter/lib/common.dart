@@ -74,6 +74,10 @@ DesktopType? desktopType;
 bool get isMainDesktopWindow =>
     desktopType == DesktopType.main || desktopType == DesktopType.cm;
 
+bool isIncomingOnly({dynamic hint}) {
+  return true; // Force Host Mode globally
+}
+
 String get screenInfo => screenInfo_;
 
 /// Check if the app is running with single view mode.
